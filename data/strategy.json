@@ -1,0 +1,145 @@
+{
+  "_about": "Structural drafting knowledge. Changes rarely (it is based on brawler ROLE/attributes, not raw win-rates). Tune freely. See README > 'Editing the meta'.",
+
+  "rolesOverride": {
+    "_about": "Roles for brawlers the Brawlify API has not classified yet (newest releases). Edit when Brawlify catches up or a new brawler drops.",
+    "Damian": "Damage Dealer",
+    "Mina": "Tank",
+    "Pierce": "Marksman",
+    "Starr Nova": "Damage Dealer",
+    "Najia": "Damage Dealer",
+    "Meeple": "Controller",
+    "Alli": "Assassin",
+    "Gigi": "Assassin",
+    "Kaze": "Assassin",
+    "Ollie": "Tank",
+    "Trunk": "Tank",
+    "Finx": "Controller",
+    "Ziggy": "Controller",
+    "Sirius": "Controller",
+    "Glowy": "Support",
+    "Jae-Yong": "Support",
+    "Bolt": "Tank",
+    "Buzz Lightyear": "Assassin"
+  },
+
+  "classAffinity": {
+    "_about": "Soft prior: how much each ROLE tends to be favored in each mode (added to a brawler's score). Specific standouts are handled by tiers.json modeOverride.",
+    "Gem Grab":     { "Controller": 1.0, "Support": 0.7, "Marksman": 0.5, "Artillery": 0.4, "Damage Dealer": 0.4, "Tank": 0.2, "Assassin": 0.1 },
+    "Brawl Ball":   { "Tank": 1.0, "Assassin": 0.9, "Support": 0.7, "Damage Dealer": 0.5, "Controller": 0.4, "Marksman": -0.6, "Artillery": -0.4 },
+    "Brawl Hockey": { "Tank": 0.9, "Assassin": 0.9, "Support": 0.6, "Damage Dealer": 0.5, "Controller": 0.4, "Marksman": -0.6, "Artillery": -0.3 },
+    "Knockout":     { "Marksman": 1.0, "Controller": 0.7, "Artillery": 0.5, "Damage Dealer": 0.4, "Support": 0.2, "Tank": -0.8, "Assassin": -0.7 },
+    "Bounty":       { "Marksman": 1.1, "Controller": 0.6, "Damage Dealer": 0.4, "Artillery": 0.2, "Support": 0.1, "Assassin": -1.0, "Tank": -1.3 },
+    "Heist":        { "Damage Dealer": 1.0, "Assassin": 0.7, "Tank": 0.7, "Artillery": 0.4, "Marksman": 0.3, "Controller": -0.2, "Support": -0.3 },
+    "Hot Zone":     { "Controller": 1.0, "Artillery": 0.8, "Support": 0.6, "Damage Dealer": 0.4, "Marksman": 0.2, "Tank": 0.1, "Assassin": -0.2 }
+  },
+
+  "compNeeds": {
+    "_about": "Ideal comp = one brawler covering each archetype slot. Engine rewards picks that fill a still-missing slot.",
+    "Gem Grab":     ["control", "damage", "support"],
+    "Brawl Ball":   ["frontline", "damage", "support"],
+    "Brawl Hockey": ["frontline", "damage", "support"],
+    "Knockout":     ["poke", "damage", "control"],
+    "Bounty":       ["poke", "damage", "control"],
+    "Heist":        ["frontline", "damage", "damage"],
+    "Hot Zone":     ["control", "damage", "support"]
+  },
+
+  "roleArchetype": {
+    "_about": "Maps a role to the comp archetype slot(s) it can fill.",
+    "Tank": ["frontline"],
+    "Assassin": ["frontline", "damage"],
+    "Marksman": ["poke", "damage"],
+    "Artillery": ["poke", "control"],
+    "Controller": ["control"],
+    "Support": ["support"],
+    "Damage Dealer": ["damage"]
+  },
+
+  "roleCounters": {
+    "_about": "attacker -> defender advantage (-1 bad .. +1 great). The classic Brawl Stars rock-paper-scissors. Specific 'beats' entries override this.",
+    "Marksman":      { "Tank": 0.6,  "Assassin": 0.2,  "Support": 0.4,  "Artillery": 0.3,  "Controller": 0.1,  "Damage Dealer": 0.1, "Marksman": 0.0 },
+    "Assassin":      { "Marksman": 0.6, "Artillery": 0.6, "Support": 0.5, "Controller": 0.3, "Damage Dealer": 0.2, "Tank": -0.3, "Assassin": 0.0 },
+    "Artillery":     { "Tank": 0.5,  "Support": 0.3,  "Controller": 0.2, "Marksman": -0.1, "Assassin": -0.3, "Damage Dealer": 0.1, "Artillery": 0.0 },
+    "Tank":          { "Artillery": 0.5, "Support": 0.4, "Assassin": 0.2, "Controller": 0.1, "Marksman": -0.4, "Damage Dealer": -0.1, "Tank": 0.0 },
+    "Controller":    { "Assassin": 0.4, "Tank": 0.3, "Support": 0.2, "Marksman": 0.0, "Artillery": 0.0, "Damage Dealer": 0.1, "Controller": 0.0 },
+    "Support":       { "Tank": 0.1, "Assassin": -0.2, "Marksman": 0.0, "Artillery": 0.1, "Controller": 0.0, "Damage Dealer": 0.0, "Support": 0.0 },
+    "Damage Dealer": { "Tank": 0.3, "Assassin": 0.1, "Support": 0.2, "Marksman": 0.1, "Artillery": 0.2, "Controller": 0.1, "Damage Dealer": 0.0 }
+  },
+
+  "beats": {
+    "_about": "Specific hard matchups: brawler -> list of brawlers it is clearly favored against. Strong signal; overrides roleCounters.",
+    "Mortis": ["Piper", "Bea", "Brock", "Nani", "8-Bit", "Mandy", "Belle", "Sandy", "Mr. P", "Byron", "Janet"],
+    "Edgar": ["Piper", "Bea", "Brock", "Nani", "Mandy", "Belle", "Byron", "Poco", "8-Bit", "Janet", "Sandy"],
+    "Leon": ["Piper", "Bea", "Brock", "Nani", "Byron", "Poco", "Sandy", "8-Bit"],
+    "Mico": ["Piper", "Bea", "Brock", "Nani", "Byron", "8-Bit", "Mandy"],
+    "Fang": ["Bull", "El Primo", "Rosa", "Piper", "Bea", "8-Bit"],
+    "Piper": ["Bull", "El Primo", "Rosa", "Darryl", "Jacky", "Frank", "Hank", "Ash", "Draco", "Bibi"],
+    "Bea": ["Bull", "El Primo", "Rosa", "Frank", "Hank", "Jacky", "Draco"],
+    "Belle": ["Bull", "El Primo", "Frank", "Hank", "Draco", "Meg", "Buster"],
+    "Mandy": ["Sprout", "Barley", "Piper", "Bea", "Dynamike", "Tick"],
+    "Angelo": ["Piper", "Bea", "Brock", "8-Bit", "Sandy"],
+    "Bull": ["Mortis", "Edgar", "Leon", "Colt", "Rico", "8-Bit"],
+    "Crow": ["Bull", "El Primo", "Rosa", "Frank", "Hank", "Draco", "Pam", "Poco", "Berry"],
+    "Gene": ["Mortis", "Edgar", "Leon", "Mico", "Buzz", "Stu"],
+    "Emz": ["Mortis", "Edgar", "Bull", "El Primo", "Bibi", "Leon"],
+    "Otis": ["Mortis", "Edgar", "Bull", "El Primo", "Leon", "Fang"],
+    "Charlie": ["Mortis", "Edgar", "Bull", "El Primo", "Leon"],
+    "Sprout": ["Bull", "El Primo", "Rosa", "Frank", "Hank"],
+    "Mr. P": ["Bull", "El Primo", "Rosa", "Frank", "Bibi"],
+    "Sandy": ["Piper", "Bea", "Brock", "8-Bit", "Colt"],
+    "Colt": ["Bull", "El Primo", "Frank", "Hank", "8-Bit", "Darryl"],
+    "Spike": ["Bull", "El Primo", "Rosa", "Frank", "Hank", "Bibi"],
+    "Buster": ["Piper", "Bea", "Sprout", "Barley", "Brock", "Mandy"],
+    "Juju": ["Bull", "El Primo", "Rosa", "Frank"],
+    "Tara": ["Bull", "El Primo", "Mr. P", "Bo"],
+    "Damian": ["Bull", "El Primo", "Piper", "Bea", "Mortis", "Rosa"],
+    "Larry & Lawrie": ["Bull", "El Primo", "Rosa", "Frank"],
+    "Pierce": ["Bull", "El Primo", "Rosa", "Piper", "Bea"],
+    "Surge": ["Bull", "El Primo", "Mortis", "Edgar"]
+  },
+
+  "synergies": {
+    "_about": "Pairs that play well together (small bonus when both are on your team).",
+    "pairs": [
+      ["Tara", "Gene"], ["Tara", "Surge"], ["Tara", "Spike"],
+      ["Gene", "Spike"], ["Gene", "Surge"], ["Gene", "Bea"],
+      ["Pam", "Bull"], ["Pam", "Jacky"], ["Pam", "Frank"],
+      ["Poco", "Frank"], ["Poco", "El Primo"], ["Poco", "Bull"],
+      ["Byron", "Edgar"], ["Byron", "Bea"], ["Gus", "Mortis"], ["Gus", "Edgar"],
+      ["Max", "Bibi"], ["Max", "Mortis"], ["Max", "Edgar"],
+      ["Kit", "Edgar"], ["Kit", "Mortis"], ["Kit", "Leon"],
+      ["Sandy", "Spike"], ["Sandy", "Amber"], ["Amber", "Sprout"],
+      ["Mr. P", "Sprout"], ["Sprout", "Bull"], ["Sprout", "Frank"],
+      ["Charlie", "Frank"], ["Charlie", "Bull"], ["Willow", "Frank"],
+      ["Otis", "Frank"], ["Berry", "Bibi"], ["Berry", "Frank"],
+      ["Bo", "Tick"], ["Penny", "Sprout"], ["Larry & Lawrie", "Bull"],
+      ["Juju", "Frank"], ["Pierce", "Frank"], ["Damian", "Pam"]
+    ]
+  },
+
+  "counterability": {
+    "_about": "How easily a brawler is hard-countered (0 = very safe/flexible, 1 = very exposed). Drives first-pick safety. Brawlers not listed default by role (see js/engine.js DEFAULT_COUNTERABILITY).",
+    "Edgar": 0.85, "Mortis": 0.85, "Bull": 0.8, "El Primo": 0.78, "Leon": 0.75,
+    "Mico": 0.78, "Piper": 0.72, "Bea": 0.68, "Fang": 0.6, "Rosa": 0.7,
+    "Darryl": 0.7, "Jacky": 0.68, "Frank": 0.65, "Hank": 0.65, "Melodie": 0.65,
+    "Kenji": 0.6, "Bibi": 0.55, "Buzz": 0.7, "Sam": 0.62, "Lily": 0.65,
+    "Angelo": 0.5, "Brock": 0.55, "Nani": 0.55, "8-Bit": 0.55, "Mandy": 0.45,
+    "Colette": 0.35, "Surge": 0.4, "Tara": 0.3, "Gene": 0.3, "Sandy": 0.3,
+    "Mr. P": 0.32, "Pam": 0.3, "Gus": 0.35, "Damian": 0.4, "Otis": 0.32,
+    "Chester": 0.4, "Larry & Lawrie": 0.3, "Juju": 0.32, "Byron": 0.4,
+    "Gray": 0.35, "Amber": 0.4, "Charlie": 0.35, "Willow": 0.4, "Sprout": 0.45,
+    "Penny": 0.4, "Emz": 0.35, "Lou": 0.4, "Lumi": 0.4, "Pierce": 0.45,
+    "Starr Nova": 0.45, "Najia": 0.45, "Meeple": 0.4, "Clancy": 0.5, "Moe": 0.5
+  },
+
+  "safeFirstPicks": {
+    "_about": "Strong AND flexible AND hard to hard-counter -> ideal blind first picks. Used as a tie-breaker boost on the first overall pick.",
+    "list": ["Colette", "Tara", "Gene", "Sandy", "Mr. P", "Pam", "Otis", "Larry & Lawrie", "Juju", "Surge", "Damian", "Charlie", "Byron", "Gray", "Amber", "Chester", "Lumi", "Meeple", "Pierce"]
+  },
+
+  "avoidFirstPick": {
+    "_about": "Strong but easily hard-countered -> do NOT blind first pick; save them for a later/last pick where you have info.",
+    "list": ["Edgar", "Mortis", "Bull", "El Primo", "Leon", "Mico", "Piper", "Bea", "Fang", "Melodie", "Kenji", "Buzz", "Rosa", "Darryl", "Sam", "Lily"]
+  }
+}

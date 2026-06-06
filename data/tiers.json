@@ -1,0 +1,85 @@
+{
+  "_about": "Power ratings, seeded from June 2026 community tier lists. base = global strength 0-10 (9+=S, 8=S-, 7=A, 6=B, 5=C, <5=D). modeOverride/mapOverride nudge per mode/map. This is the file the weekly GitHub Action tries to refresh; also safe to hand-edit.",
+  "updated": "2026-06-06",
+  "season": "June 2026 (post v67 balance)",
+  "autoRefreshBase": true,
+
+  "base": {
+    "Damian": 9.5, "Colette": 9.1, "Lumi": 8.9, "Edgar": 8.8, "Otis": 8.8,
+    "Chester": 8.7, "Crow": 8.7, "Starr Nova": 8.7, "Najia": 8.6, "Pierce": 8.6,
+    "Mortis": 8.5, "Colt": 8.5, "Mina": 8.4, "Meeple": 8.3, "Juju": 8.3,
+    "Bibi": 8.2, "Kit": 8.2, "Leon": 8.1, "Clancy": 8.0, "Kenji": 8.0,
+    "Tara": 8.0, "Gene": 7.9, "Surge": 7.9, "Larry & Lawrie": 7.9, "Spike": 7.8,
+    "Pam": 7.6, "Angelo": 7.6, "Melodie": 7.5, "Sandy": 7.5, "Mr. P": 7.4,
+    "Byron": 7.3, "Fang": 7.3, "Kaze": 7.3, "Gray": 7.2, "Maisie": 7.2,
+    "Mandy": 7.2, "Buster": 7.2, "Moe": 7.2, "Sirius": 7.2, "Shade": 7.1,
+    "Carl": 7.1, "Stu": 7.1, "Charlie": 7.1, "Cordelius": 7.1, "Gigi": 7.1,
+    "Bonnie": 7.1, "Penny": 7.0, "Gus": 7.0, "Berry": 7.0, "Lily": 7.0,
+    "Ollie": 7.0, "Jae-Yong": 7.0, "Sprout": 7.0, "Belle": 7.0, "Hank": 6.9,
+    "Willow": 6.9, "Alli": 6.9, "Glowy": 6.9, "Frank": 6.8, "Max": 6.8,
+    "Piper": 6.8, "Janet": 6.7, "Amber": 6.6, "Nani": 6.6, "Bea": 6.6,
+    "Tick": 6.6, "Barley": 6.5, "Grom": 6.5, "Squeak": 6.5, "Draco": 6.4,
+    "Dynamike": 6.4, "Gale": 6.4, "Lou": 6.4, "Pearl": 6.4, "Buzz": 6.4,
+    "Buzz Lightyear": 6.4, "Shelly": 6.4, "Emz": 6.4, "Bo": 6.3, "Griff": 6.3,
+    "R-T": 6.3, "Poco": 6.3, "Sam": 6.3, "Mico": 6.3, "Trunk": 6.3,
+    "Jessie": 6.2, "Jacky": 6.2, "Darryl": 6.2, "Chuck": 6.2, "Rico": 6.2,
+    "Brock": 6.2, "Lola": 6.1, "Bull": 6.1, "Bolt": 6.1, "Nita": 6.0,
+    "Eve": 6.0, "8-Bit": 6.0, "Doug": 6.0, "Ruffs": 6.0, "Rosa": 6.0,
+    "El Primo": 6.0, "Ash": 6.0, "Finx": 7.2, "Ziggy": 7.1, "Meg": 5.7
+  },
+
+  "modeOverride": {
+    "_about": "Per-mode deltas for brawlers that over/under-perform vs their global rating.",
+    "Gem Grab": {
+      "Tara": 1.2, "Gene": 1.0, "Amber": 0.9, "Sandy": 0.9, "Mr. P": 0.7,
+      "Emz": 0.7, "Surge": 0.6, "Mortis": 0.5, "Pam": 0.6, "Bo": 0.5,
+      "Bull": -1.0, "El Primo": -0.8, "Edgar": -0.6, "Piper": -0.4
+    },
+    "Brawl Ball": {
+      "Mortis": 1.2, "Bibi": 1.1, "Edgar": 0.9, "Melodie": 0.9, "Max": 0.9,
+      "Kenji": 0.7, "Kit": 0.7, "Buster": 0.7, "Fang": 0.9, "El Primo": 0.7,
+      "Frank": 0.6, "Berry": 0.6, "Piper": -1.6, "Bea": -1.2, "Mandy": -1.0,
+      "Tick": -0.7, "Brock": -0.8, "Belle": -0.7, "Angelo": -0.6
+    },
+    "Brawl Hockey": {
+      "Mortis": 0.9, "Bibi": 1.0, "Max": 1.0, "Melodie": 0.8, "Kenji": 0.7,
+      "Surge": 0.6, "Edgar": 0.6, "Kit": 0.6, "Piper": -1.2, "Bea": -1.0,
+      "Mandy": -0.9, "Brock": -0.7, "Tick": -0.5
+    },
+    "Knockout": {
+      "Piper": 1.2, "Mandy": 1.0, "Angelo": 0.9, "Bea": 0.7, "Belle": 0.7,
+      "Nani": 0.7, "Bonnie": 0.6, "Mr. P": 0.6, "Gene": 0.5, "Maisie": 0.6,
+      "Bull": -1.8, "El Primo": -1.6, "Edgar": -1.3, "Mortis": -1.2,
+      "Rosa": -1.0, "Darryl": -0.9, "Jacky": -0.9, "Bibi": -0.6
+    },
+    "Bounty": {
+      "Piper": 1.4, "Mandy": 1.2, "Belle": 0.9, "Angelo": 0.9, "Bea": 0.8,
+      "Nani": 0.7, "Bo": 0.7, "Janet": 0.6, "Sandy": 0.6, "Brock": 0.6,
+      "Bull": -2.5, "El Primo": -2.5, "Edgar": -2.0, "Mortis": -2.0,
+      "Rosa": -1.8, "Darryl": -1.8, "Jacky": -1.5, "Bibi": -1.2, "Frank": -1.5
+    },
+    "Heist": {
+      "Colt": 1.2, "Bull": 1.5, "Darryl": 1.3, "Spike": 0.9, "Surge": 0.9,
+      "Pearl": 1.0, "Edgar": 0.9, "Fang": 0.9, "Mortis": 0.6, "Carl": 0.7,
+      "8-Bit": 0.8, "Barley": 0.6, "Crow": 0.5, "Rico": 0.7, "Shelly": 0.6,
+      "Poco": -0.6, "Sandy": -0.5, "Gale": -0.4, "Mr. P": -0.4
+    },
+    "Hot Zone": {
+      "Sprout": 1.1, "Sandy": 0.9, "Amber": 0.9, "Emz": 0.9, "Gene": 0.6,
+      "Mr. P": 0.6, "Barley": 0.8, "Charlie": 0.7, "Otis": 0.6, "Tara": 0.7,
+      "Gus": 0.6, "Willow": 0.6, "Bull": -0.6, "Edgar": -0.4, "Piper": -0.3
+    }
+  },
+
+  "mapOverride": {
+    "_about": "Optional per-map tuning, keyed by EXACT Brawlify map name. Examples below; add more as you learn maps. Empty {} is fine.",
+    "Hard Rock Mine": { "Tara": 0.6, "Surge": 0.5, "Colt": 0.4, "Mr. P": 0.4 },
+    "Undermine": { "Sprout": 0.6, "Tara": 0.5, "Gene": 0.4 },
+    "Backyard Bowl": { "Mortis": 0.7, "Bibi": 0.5, "Colette": 0.4 },
+    "Pinhole Punt": { "Larry & Lawrie": 0.6, "Mr. P": 0.5, "Sprout": 0.4 },
+    "Shooting Star": { "Piper": 0.6, "Mandy": 0.5, "Bo": 0.4 },
+    "Goldarm Gulch": { "Larry & Lawrie": 0.6, "Sprout": 0.5, "Piper": 0.4 },
+    "Kaboom Canyon": { "Bull": 0.7, "Darryl": 0.6, "Colt": 0.5 },
+    "Open Business": { "Sandy": 0.5, "Amber": 0.5, "Sprout": 0.4 }
+  }
+}
